@@ -1,0 +1,50 @@
+* {
+  border: 2px dotted gray;
+}
+
+main {
+  background-image: url("http://via.placeholder.com/1920x1080");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 1080px;
+}
+
+h1 {
+  padding-left: 2%;
+  font-size: 7em;
+  font-family: 'Raleway', sans-serif;
+
+}
+
+nav {
+  padding-left: 2%;
+  font-size: 4em;
+}
+
+li {
+  border-bottom: 2px solid white;
+  width: 25%;
+  font-family: 'Raleway', sans-serif;
+}
+
+a:link {
+  text-decoration: none;
+  color: DimGrey;
+}
+
+a:hover {
+
+}
+
+a:active {
+
+}
+
+
+
+
+
+footer {
+  text-align: center;
+  font-size: 2em;
+}

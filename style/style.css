@@ -10,12 +10,20 @@ main {
 }
 
 h1 {
-  font-size: 5em;
+  padding-left: 2%;
+  font-size: 7em;
+  font-family: 'Raleway', sans-serif;
 
 }
 
 nav {
-  font-size: 2em;
+  padding-left: 2%;
+  font-size: 4em;}
+
+li {
+  border-bottom: 2px solid white;
+  width: 25%;
+  font-family: 'Raleway', sans-serif;
 }
 
 a:link {
@@ -37,5 +45,5 @@ a:active {
 
 footer {
   text-align: center;
-  font-size: 1em;
+  font-size: 2em;
 }

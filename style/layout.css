@@ -21,14 +21,6 @@ nav {
   font-size: 4em;
 }
 
-img {
-  height: 1.5em;
-}
-
-ul {
-  display: none;
-}
-
 li {
   border-bottom: 2px solid white;
   width: 25%;

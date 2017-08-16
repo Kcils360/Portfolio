@@ -21,6 +21,10 @@ nav {
   font-size: 4em;
 }
 
+img {
+  height: 1.5em;
+}
+
 ul {
   display: none;
 }

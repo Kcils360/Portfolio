@@ -1,0 +1,41 @@
+* {
+  border: 2px dotted gray;
+}
+
+main {
+  background-image: url("http://via.placeholder.com/1920x1080");
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 1080px;
+}
+
+h1 {
+  font-size: 5em;
+
+}
+
+nav {
+  font-size: 2em;
+}
+
+a:link {
+  text-decoration: none;
+  color: DimGrey;
+}
+
+a:hover {
+
+}
+
+a:active {
+
+}
+
+
+
+
+
+footer {
+  text-align: center;
+  font-size: 1em;
+}

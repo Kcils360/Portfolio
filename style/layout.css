@@ -18,13 +18,14 @@ h1 {
 
 nav {
   padding-left: 2%;
-  font-size: 4em;
+  font-size: 3.2em;
 }
 
-li {
+.menu li {
   border-bottom: 2px solid white;
   width: 25%;
   font-family: 'Raleway', sans-serif;
+  display: none;
 }
 
 a:link {
@@ -36,11 +37,29 @@ a:hover {
 
 }
 
-a:active {
-
+a:visited {
+  color: DimGrey;
 }
 
+@media screen and (min-width: 800px) {
 
+  i {
+    display: none;
+  }
+
+  .menu {
+    max-width: 100%;
+  }
+
+  .menu li {
+    display: inline;
+    width: 10%;
+    padding-right: 4%;
+    border: none;
+
+  }
+
+}
 
 
 

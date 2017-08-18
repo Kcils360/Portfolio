@@ -2,12 +2,10 @@
   border: 2px dotted gray;
 }
 
-main {
-  background-image: url("http://via.placeholder.com/1920x1080");
-  background-size: contain;
-  background-repeat: no-repeat;
+/*main {
+  width: 1960px;
   height: 1080px;
-}
+}*/
 
 h1 {
   padding-left: 2%;
@@ -19,6 +17,29 @@ h1 {
 nav {
   padding-left: 2%;
   font-size: 3.2em;
+}
+
+
+#slider {
+  /*width: 1920px;*/
+  overflow: hidden;
+}
+
+#slider .slides {
+  display: block;
+  width: 10000px;
+  margin: 0;
+  padding: 0;
+}
+
+#slider .slide {
+  float: left;
+  list-style-type: none;
+  /*width: 1920px;*/
+}
+
+img {
+  /*width: 100%;*/
 }
 
 .menu li {

@@ -1,13 +1,20 @@
 'use-strict';
 
+var handleMainNav = function(){
+  $('.tab-content').hide();
+  $('.menu li').on('click', function() {
+    console.log('click! ', this);
+    $('#slider').hide();
+    $('.tab-content').fadeIn(500);
+    // $('nav .tab:first').click();
+  });
+};
 
-// $('li').on('click', function() {
-//   var $aboutShow = $(this).data('content');
-//   $('section').hide();
-//   $('#' + $aboutShow).fadeIn(500);
-// });
-//
-//
+$('#hamburger').click(function(){
+  $('.menu').slideToggle();
+});
+
+handleMainNav();
 
 //--------------------------carousel------------------------------
 $(function() {
@@ -25,13 +32,13 @@ $(function() {
   $slides.css('max-width', width);
   $image.css('width', width);
   setInterval(function(){
-    $slideContainer.animate({'margin-left': '-='+width}, 1000, function(){
+    $slideContainer.animate({'margin-left': '-='+width}, 1500, function(){
       currentSlide++;
       if(currentSlide === $slides.length){
         currentSlide = 1;
         $slideContainer.css('margin-left', 0);
       }
     });
-  }, 3000);
+  }, 5000);
 });
 //----------------------------------------------------------------

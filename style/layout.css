@@ -2,11 +2,10 @@
   border: 2px dotted gray;
 }
 
-main {
-  background-size: contain;
-  background-repeat: no-repeat;
+/*main {
+  width: 1960px;
   height: 1080px;
-}
+}*/
 
 h1 {
   padding-left: 2%;
@@ -20,20 +19,15 @@ nav {
   font-size: 3.2em;
 }
 
-img {
-  max-width: 720px;
-}
 
 #slider {
-  width: 720px;
-  height: 400px;
+  /*width: 1920px;*/
   overflow: hidden;
 }
 
 #slider .slides {
   display: block;
-  width: 6000px;
-  height: 400px;
+  width: 10000px;
   margin: 0;
   padding: 0;
 }
@@ -41,8 +35,11 @@ img {
 #slider .slide {
   float: left;
   list-style-type: none;
-  width: 720px;
-  height: 400px;
+  /*width: 1920px;*/
+}
+
+img {
+  /*width: 100%;*/
 }
 
 .menu li {

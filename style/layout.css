@@ -2,26 +2,27 @@
   border: 2px dotted gray;
 }
 
-/*main {
-  width: 1960px;
-  height: 1080px;
-}*/
+main {
+  position: relative;
+}
 
 h1 {
   padding-left: 2%;
-  font-size: 7em;
+  font-size: 5.5em;
   font-family: 'Raleway', sans-serif;
 
 }
 
 nav {
   padding-left: 2%;
+  max-width: 100%;
   font-size: 3.2em;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 
 #slider {
-  /*width: 1920px;*/
   overflow: hidden;
 }
 

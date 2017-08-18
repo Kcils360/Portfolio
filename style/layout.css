@@ -18,7 +18,8 @@ nav {
   max-width: 100%;
   font-size: 3.2em;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.5);
+  background: linear-gradient(to bottom, white, 0.5)
+  /*background-color: rgba(255, 255, 255, 0.5);*/
 }
 
 
@@ -65,7 +66,7 @@ a:visited {
 
 @media screen and (min-width: 800px) {
 
-  i {
+#hamburger {
     display: none;
   }
 

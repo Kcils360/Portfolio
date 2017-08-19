@@ -2,18 +2,19 @@
 
 var handleMainNav = function(){
   $('.tab-content').hide();
-  $('.menu li').on('click', function() {
-    console.log('click! ', this);
+  var $menuList = $('.menu li');
+  $($menuList).on('click', function() {
+    console.log(this.className);
     $('#slider').hide();
-    $('.tab-content').fadeIn(500);
-    // $('nav .tab:first').click();
+    $('#tab').hide();
+    $('#' + this.className).fadeIn(500);
   });
-};
+
 
 $('#hamburger').click(function(){
   $('.menu').slideToggle();
 });
-
+}
 handleMainNav();
 
 //--------------------------carousel------------------------------

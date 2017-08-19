@@ -17,7 +17,7 @@ h1 {
 
 nav {
   padding: 2%;
-  max-width: 100%;
+  width: 100%;
   font-size: 3.2em;
   position: absolute;
   border-radius: 5px;

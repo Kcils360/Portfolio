@@ -1,0 +1,45 @@
+#slider {
+  overflow: hidden;
+}
+
+#slider .slides {
+  display: block;
+  width: 10000px;
+  margin: 0;
+  padding: 0;
+}
+
+#slider .slide {
+  float: left;
+  list-style-type: none;
+}
+
+@media screen and (min-width: 800px) {
+
+#hamburger {
+    display: none;
+  }
+
+  nav {
+    background: linear-gradient(to bottom, white 60%, transparent);
+  }
+
+  .menu {
+    margin: 0;
+    max-width: 100%;
+    display: block;
+  }
+
+  .menu li {
+    display: inline;
+    width: 10%;
+    padding-right: 4%;
+    border: none;
+    background-color: transparent;
+  }
+
+  .menu li:last-child {
+    padding-right: 0;
+  }
+
+}

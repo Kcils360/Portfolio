@@ -26,6 +26,12 @@ $(function() {
   var $slideContainer = $slider.find('.slides');
   var $slides = $slideContainer.find('.slide');
 
+  if(width < height){
+    $slider = $('#sliderTall');
+    $slideContainer = $slider.find('.slidesTall');
+    $slides = $slideContainer.find('.slideTall');
+  }
+
   $slideContainer.css('height', height);
   $slider.css('max-width', width);
   $slides.css('max-width', width);

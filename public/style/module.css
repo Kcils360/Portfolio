@@ -29,3 +29,7 @@ a:visited {
 .tab-content {
   padding-top: 100px;
 }
+
+.home-content {
+  display: none;
+}

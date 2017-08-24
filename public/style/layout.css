@@ -2,14 +2,14 @@
   overflow: hidden;
 }
 
-#slider .slides {
+#slider .slides, .slidesTall {
   display: block;
   width: 10000px;
   margin: 0;
   padding: 0;
 }
 
-#slider .slide {
+#slider .slide, .slideTall {
   float: left;
   list-style-type: none;
 }
@@ -40,6 +40,14 @@
 
   .menu li:last-child {
     padding-right: 0;
+  }
+
+  .home-content {
+    display: block;
+  }
+
+  .home-contentTall {
+    display: none;
   }
 
 }

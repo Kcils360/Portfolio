@@ -1,3 +1,13 @@
+
+.nugget {
+  position: absolute;
+  margin-left: 65%;
+  margin-top: 10px;
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
 #slider {
   overflow: hidden;
 }
@@ -15,6 +25,11 @@
 }
 
 @media screen and (min-width: 800px) {
+
+  .nugget {
+    margin-left: 720px;
+    margin-top: 10px;
+  }
 
 #hamburger {
     display: none;

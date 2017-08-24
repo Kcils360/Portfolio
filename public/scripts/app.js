@@ -1,7 +1,7 @@
 'use-strict';
 
-let width = $(window).width();
-let height = $(window).height();
+const width = $(window).width();
+const height = $(window).height();
 
 (function handleMainNav(){
   $('.tab-content').hide();

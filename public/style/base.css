@@ -3,10 +3,15 @@ main {
   max-width: 100%;
 }
 
+header {
+  height: 120px;
+}
+
 h1 {
   padding-left: 2%;
+  padding-top: 15px;
   padding-bottom: 10px;
-  font-size: 5.5em;
+  font-size: 5em;
   font-family: 'Raleway', sans-serif;
 
 }

@@ -1,3 +1,10 @@
+.nugget {
+  float: right;
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+
 .menu {
   display: none;
 }
@@ -21,12 +28,16 @@ a:hover {
   color: #63688e;
 }
 
+a:active {
+  text-decoration: none;
+}
+
 a:visited {
   color: DimGrey;
   text-decoration: none;
 }
 
-.tab-content {
+.about-content {
   padding-top: 100px;
 }
 

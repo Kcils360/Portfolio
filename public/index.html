@@ -13,19 +13,34 @@
     <link rel="stylesheet" href="style/module.css">
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/layout.css">
+    <script id="projects-template" type="text/x-handlebars-template">
+<!-- ++++++++++++++++++++++++++++++++++++template++++++++++++++++++++++++++++++++++++++++++++++ -->
+  <article data-category="{{category}}" data-author="{{author}}">
+    <header>
+      <h1>{{title}}</h1>
+      <div class="byline">
+        By <address><a href="{{authorUrl}}">{{author}}</a></address> published <time pubdate datetime="2000-01-01">{{daysAgo}}</time>
+      </div>
+    </header>
 
+    <section class="article-body">{{{body}}}</section>
+    <a href="#" class="read-on">Read on &rarr;</a>
+  </article>
+</script>
+<!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   </head>
   <body>
     <header>
       <h1>Gregory Dukes</h1>
+      <img class="nugget" src="/public/img/SelfImg.jpg" />
     </header>
     <main>
           <nav>
             <i id="hamburger" class="fa fa-bars" aria-hidden="true"></i>
             <ul class="menu">
-              <li><a href="https://github.com/Kcils360">Projects</a></li>
+              <li id="menuLi" class="projects"><a href="#">Projects<a></li>
               <li><a href="#">Work</a></li>
-              <li id="menuLi" class="tab" data-content="about-me"><a href="#">About</a></li>
+              <li id="menuLi" class="about" data-content="about-me"><a href="#">About</a></li>
               <li id="menuLi" class="slider" data-content="home"><a href="#">Home</a></li>
             </ul>
           </nav>
@@ -49,22 +64,25 @@
             <li class="slideTall"><img src="/public/img/Tall1.jpg" /></li>
           </ul>
       </div>
-        <section id="tab" class="tab-content">
-          <h2>This is  a little about me</h2>
-          <ul>
-            <li>I enjoy watching movies.</li>
-            <li>More than watching movies, I enjoy pizza.</li>
-            <li>Just when I think I understand coding, I go to do something and am stumped.</li>
-            <li>I don't know what I'm doing.  I'll have to wait untill tomorrow to get the good code.  </li>
-          </ul>
-          <ul>
-            <li class="icon-git">Git Hub</li>
-            <li class="icon-linkdin">LinkdIn</li>
-            <li class="icon-twitter">Twitter</li>
-            <li class="icon-email"><a href="mailto:dukes.gregoryd@gmail.com">Email</li>
-          </ul>
-        </section>
-      </div>
+      <section id="project" class="project-content">
+        <div>
+        </div>
+      </section>
+      <section id="about" class="about-content">
+        <h2>This is  a little about me</h2>
+        <ul>
+          <li>I enjoy watching movies.</li>
+          <li>More than watching movies, I enjoy pizza.</li>
+          <li>Just when I think I understand coding, I go to do something and am stumped.</li>
+          <li>I don't know what I'm doing.  I'll have to wait untill tomorrow to get the good code.  </li>
+        </ul>
+        <ul>
+          <li class="icon-git">Git Hub</li>
+          <li class="icon-linkdin">LinkdIn</li>
+          <li class="icon-twitter">Twitter</li>
+          <li class="icon-email"><a href="mailto:dukes.gregoryd@gmail.com">Email</li>
+        </ul>
+      </section>
     </main>
     <footer>
       <p>Gregory Dukes &copy; 2017</p>

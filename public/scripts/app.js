@@ -1,5 +1,6 @@
 'use-strict';
 
+
 const width = $(window).width();
 const height = $(window).height();
 const hideContent = function(){
@@ -8,6 +9,12 @@ const hideContent = function(){
   $('#about').hide();
   $('#project').hide();
 };
+
+if(width > height){
+  $('#break').remove();
+}
+
+
 hideContent();
 if(width<height){
   $('sliderTall').show();

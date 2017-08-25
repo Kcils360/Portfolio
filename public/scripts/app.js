@@ -2,15 +2,19 @@
 
 const width = $(window).width();
 const height = $(window).height();
-
+const hideContent = function(){
+  $('#slider').hide();
+  $('#about').hide();
+  $('#project').hide();
+};
+hideContent();
+$('#slider').show();
 (function handleMainNav(){
   $('.tab-content').hide();
   var $menuList = $('.menu li');
   $($menuList).on('click', function() {
     console.log(this.className);
-    $('#slider').hide();
-    $('#about').hide();
-    $('#project')
+    hideContent();
     $('#' + this.className).fadeIn(700);
     if(width < height){
       $('.menu').slideToggle();
@@ -29,18 +33,19 @@ $(function() {
   let $slider = $('#slider');
   let $slideContainer = $slider.find('.slides');
   let $slides = $slideContainer.find('.slide');
+  let $slidesImg = $slides.find('img')
 
   if(width < height){
     $slider = $('#sliderTall');
-    $('#sliderTall[img]').css('width', width);
     $slideContainer = $slider.find('.slidesTall');
     $slides = $slideContainer.find('.slideTall');
+    $slidesImg = $slides.find('img')
   }
 
   $slideContainer.css('height', height);
   $slider.css('max-width', width);
   $slides.css('max-width', width);
-  $('#slider[img]').css('width', width);
+  $slidesImg.css('width', width);
   setInterval(function(){
     $slideContainer.animate({'margin-left': '-='+width}, 1500, function(){
       currentSlide++;
@@ -54,12 +59,8 @@ $(function() {
 //----------------------------------------------------------------
 
 function Project (rawDataObj) {
-  this.author = rawDataObj.author;
-  this.authorUrl = rawDataObj.authorUrl;
   this.title = rawDataObj.title;
-  this.category = rawDataObj.category;
   this.body = rawDataObj.body;
-  this.publishedOn = rawDataObj.publishedOn;
 }
 
 Project.prototype.toHtml = function() {

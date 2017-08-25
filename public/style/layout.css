@@ -12,16 +12,33 @@
   overflow: hidden;
 }
 
-#slider .slides, .slidesTall {
+#sliderTall {
+  overflow: hidden;
+}
+
+#slider .slides {
   display: block;
   width: 10000px;
   margin: 0;
   padding: 0;
 }
 
-#slider .slide, .slideTall {
+#slider .slide {
   float: left;
   list-style-type: none;
+}
+
+#sliderTall .slideTall {
+  float: left;;
+  list-style-type: none;
+}
+
+
+#sliderTall .slidesTall {
+  display: block;
+  width: 10000px;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (min-width: 800px) {

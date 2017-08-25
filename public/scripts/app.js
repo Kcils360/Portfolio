@@ -4,14 +4,18 @@ const width = $(window).width();
 const height = $(window).height();
 const hideContent = function(){
   $('#slider').hide();
+  $('sliderTall').hide();
   $('#about').hide();
   $('#project').hide();
 };
 hideContent();
-$('#slider').show();
+if(width<height){
+  $('sliderTall').show();
+} else{
+  $('#slider').show();
+}
 (function handleMainNav(){
-  $('.tab-content').hide();
-  var $menuList = $('.menu li');
+  const $menuList = $('.menu li');
   $($menuList).on('click', function() {
     console.log(this.className);
     hideContent();

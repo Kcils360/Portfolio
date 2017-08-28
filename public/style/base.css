@@ -29,6 +29,7 @@ nav {
   position: absolute;
   border-radius: 5px;
   background: none;
+  z-index: 2;
 }
 
 footer {

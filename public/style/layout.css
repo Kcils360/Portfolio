@@ -43,6 +43,10 @@
 
 @media screen and (min-width: 800px) {
 
+  html {
+    background-color: #9cb8e5;
+  }
+
   header {
     height: 120px;
   }
@@ -52,8 +56,12 @@
     margin-top: 10px;
   }
 
-#hamburger {
+  #hamburger {
     display: none;
+  }
+
+  body {
+    background-color: #9cb8e5;
   }
 
   nav {

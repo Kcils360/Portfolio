@@ -1,11 +1,13 @@
 'use-strict';
+var app = app || {};
 
+(function(module) {
 
 const width = $(window).width();
 const height = $(window).height();
 const hideContent = function(){
   $('#slider').hide();
-  $('sliderTall').hide();
+  $('#sliderTall').hide();
   $('#about').hide();
   $('#project').hide();
 };
@@ -17,20 +19,20 @@ if(width > height){
 
 hideContent();
 if(width<height){
-  $('sliderTall').show();
+  $('#sliderTall').show();
 } else{
   $('#slider').show();
 }
-(function handleMainNav(){
-  const $menuList = $('.menu li');
-  $($menuList).on('click', function() {
-    console.log(this.className);
-    hideContent();
-    $('#' + this.className).fadeIn(700);
-    if(width < height){
-      $('.menu').slideToggle();
-    }
-  });
+// (function handleMainNav(){
+//   const $menuList = $('.menu li');
+//   $($menuList).on('click', function() {
+//     console.log(this.className);
+//     hideContent();
+//     $('#' + this.className).fadeIn(700);
+//     if(width < height){
+//       $('.menu').slideToggle();
+//     }
+//   });
 
   $('#hamburger').click(function(){
     $('.menu').slideToggle();
@@ -83,3 +85,5 @@ Project.prototype.toHtml = function() {
   // DONE: Use the function that Handlebars gave you to return your filled-in html template for THIS article.
   return templateRender(this);
 };
+module.hideContent = hideContent;
+})(app);

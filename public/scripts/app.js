@@ -62,17 +62,7 @@ $(function() {
 });
 //----------------------------------------------------------------
 
-function Project (rawDataObj) {
-  this.title = rawDataObj.title;
-  this.body = rawDataObj.body;
-}
-
-Project.prototype.toHtml = function() {
-  // DONE: Use handlebars to render your articles.
-  //       - Get your template from the DOM.
-  //       - Now "compile" your template with Handlebars.
-  const projectTemplate = $('#projects-template').html();
-  const templateRender = Handlebars.compile(projectTemplate);
-  // DONE: Use the function that Handlebars gave you to return your filled-in html template for THIS article.
-  return templateRender(this);
-};
+$.get('/github/user/repos')
+.then(data => data.forEach(repo =>
+  $('#about').append(`<p>${repo.name}</p>`)),
+  err => con

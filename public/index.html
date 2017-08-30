@@ -14,20 +14,27 @@
     <link rel="stylesheet" href="style/base.css">
     <link rel="stylesheet" href="style/layout.css">
 <!-- ++++++++++++++++++++++++++++++++++++template++++++++++++++++++++++++++++++++++++++++++++++ -->
-<script id="projects-template" type="text/x-handlebars-template">
-  <article data-category="{{category}}" data-author="{{author}}">
-    <header>
-      <h1>{{title}}</h1>
-    </header>
-    <section class="projects-body">{{{body}}}</section>
-  </article>
+<script id="repo-template" type="text/x-handlebars-template">
+  <li>
+    <a href="{{html_url}}" target="_blank">
+      <h3>{{Name}}</h3>
+    </a>
+    <p>Description: {{description}}</p>
+    <p>Language: {{language}}</p>
+    <p>Created: {{dateCreated}}</p>
+    <p>Last updated: {{dateLastUpdated}}</p>
+    {{#if watchers_count}}
+      <p>{{watchers_count}} watching this repo</p>
+    {{/if}}
+  </li>
 </script>
 <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
   </head>
   <body>
     <header>
       <img class="nugget" src="/public/img/SelfImg.jpg" />
-      <h1>Gregory Dukes</h1>
+      <h1>Gregory <br id="break">Dukes</h1>
+
     </header>
     <main>
           <nav>
@@ -35,8 +42,8 @@
             <ul class="menu">
               <li id="menuLi" class="projects"><a href="#">Projects<a></li>
               <li><a href="#">Work</a></li>
-              <li id="menuLi" class="about" data-content="about-me"><a href="#">About</a></li>
-              <li id="menuLi" class="slider" data-content="home"><a href="#">Home</a></li>
+              <li id="menuLi" class="about" data-content="about-me"><a href="/about">About</a></li>
+              <li id="menuLi" class="slider" data-content="home"><a href="/">Home</a></li>
             </ul>
           </nav>
           <div id="slider" class="home-content">
@@ -63,25 +70,26 @@
         <div>
         </div>
       </section>
-      <section id="about" class="about-content">
-        <h2>This is  a little about me</h2>
-        <ul>
-          <li>I enjoy watching movies.</li>
-          <li>More than watching movies, I enjoy pizza.</li>
-          <li>Just when I think I understand coding, I go to do something and am stumped.</li>
-          <li>I don't know what I'm doing.  I'll have to wait untill tomorrow to get the good code.  </li>
-        </ul>
-        <ul>
-          <li class="icon-git">Git Hub</li>
-          <li class="icon-linkdin">LinkdIn</li>
-          <li class="icon-twitter">Twitter</li>
-          <li class="icon-email"><a href="mailto:dukes.gregoryd@gmail.com">Email</li>
-        </ul>
+      <section id="about" class="tab-content">
+        <header>
+          Welcome to my Blog
+        </header>
+        <section>
+          <h1>Some of my intrests:</h1>
+          <ul>
+            <li>Coding</li>
+            <li>Sharing what I've learned</li>
+            <li>Hanging with my family</li>
+          </ul>
+        </section>
       </section>
     </main>
     <footer>
       <p>Gregory Dukes &copy; 2017</p>
     </footer>
+      <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
     <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/controllers/routes.js"></script>
+    <script src="scripts/controllers/repo.js">
   </body>
 </html>

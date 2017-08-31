@@ -1,15 +1,16 @@
-'use-strict';
+'use strict';
 
-const width = $(window).width();
-const height = $(window).height();
+const $width = $(window).width();
+const $height = $(window).height();
 const hideContent = function(){
   $('#slider').hide();
   $('sliderTall').hide();
   $('#about').hide();
   $('#project').hide();
 };
+
 hideContent();
-if(width<height){
+if($width<$height){
   $('sliderTall').show();
 } else{
   $('#slider').show();
@@ -20,7 +21,7 @@ if(width<height){
     console.log(this.className);
     hideContent();
     $('#' + this.className).fadeIn(700);
-    if(width < height){
+    if($width < $height){
       $('.menu').slideToggle();
     }
   });
@@ -39,19 +40,19 @@ $(function() {
   let $slides = $slideContainer.find('.slide');
   let $slidesImg = $slides.find('img')
 
-  if(width < height){
+  if($width < $height){
     $slider = $('#sliderTall');
     $slideContainer = $slider.find('.slidesTall');
     $slides = $slideContainer.find('.slideTall');
     $slidesImg = $slides.find('img')
   }
 
-  $slideContainer.css('height', height);
-  $slider.css('max-width', width);
-  $slides.css('max-width', width);
-  $slidesImg.css('width', width);
+  $slideContainer.css('height', $height);
+  $slider.css('max-width', $width);
+  $slides.css('max-width', $width);
+  $slidesImg.css('width', $width);
   setInterval(function(){
-    $slideContainer.animate({'margin-left': '-='+width}, 1500, function(){
+    $slideContainer.animate({'margin-left': '-='+$width}, 1500, function(){
       currentSlide++;
       if(currentSlide === $slides.length){
         currentSlide = 1;
@@ -65,4 +66,4 @@ $(function() {
 $.get('/github/user/repos')
 .then(data => data.forEach(repo =>
   $('#about').append(`<p>${repo.name}</p>`)),
-  err => con
+  err => console.error(err));

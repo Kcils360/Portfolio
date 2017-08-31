@@ -1,8 +1,8 @@
 
 .nugget {
   position: absolute;
-  margin-left: 65%;
-  margin-top: 10px;
+  margin-left: calc(97% - 100px);
+  margin-top: 137px;
   width: 100px;
   height: auto;
   border-radius: 50%;
@@ -41,6 +41,15 @@
   padding: 0;
 }
 
+@media screen and (max-width: 360px) {
+  .nugget {
+    margin-top: 190px;
+    margin-left: calc(97% - 75px);
+    height: 75px;
+    width: 75px;
+  }
+}
+
 @media screen and (min-width: 800px) {
 
   header {
@@ -48,7 +57,6 @@
   }
 
   .nugget {
-    margin-left: 720px;
     margin-top: 10px;
   }
 
@@ -57,7 +65,13 @@
   }
 
   nav {
-    background: linear-gradient(to bottom, white 60%, transparent);
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.75) 54%, transparent);
+    padding-top: 0;
+    margin-top: 120px;
+  }
+
+  #break {
+    display: none;
   }
 
   .menu {

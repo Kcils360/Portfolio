@@ -4,14 +4,14 @@ const $width = $(window).width();
 const $height = $(window).height();
 const hideContent = function(){
   $('#slider').hide();
-  $('sliderTall').hide();
+  $('#sliderTall').hide();
   $('#about').hide();
   $('#project').hide();
 };
 
 hideContent();
 if($width<$height){
-  $('sliderTall').show();
+  $('#sliderTall').show();
 } else{
   $('#slider').show();
 }
@@ -65,5 +65,7 @@ $(function() {
 
 $.get('/github/user/repos')
 .then(data => data.forEach(repo =>
-  $('#about').append(`<p>${repo.name}</p>`)),
+  $('#project').append(`<p>${repo.name}</p>`)),
   err => console.error(err));
+
+// -------------------------------------------------------------

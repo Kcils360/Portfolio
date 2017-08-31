@@ -33,8 +33,20 @@ a:visited {
 }
 
 .about-content {
-  padding-top: 100px;
+  padding-top: 280px;
 }
+
+.about-content p {
+  font-size: 2em;
+  padding: 2%;
+}
+
+.details {
+  font-size: 1.5em;
+  padding-left: 10%;
+  list-style: square;
+}
+
 
 .home-content {
   display: none;

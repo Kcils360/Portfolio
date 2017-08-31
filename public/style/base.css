@@ -29,9 +29,17 @@ nav {
   font-size: 3.2em;
   border-radius: 5px;
   background: none;
+  z-index: 2;
+}
+
+h3 {
+  font-size: 2.2em;
+  padding-left: 2%;
+  padding-bottom: 10px;
 }
 
 footer {
   text-align: center;
   font-size: 2em;
+  padding-top: 20px;
 }

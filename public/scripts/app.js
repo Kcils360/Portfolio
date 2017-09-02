@@ -65,7 +65,8 @@ $(function() {
 
 $.get('/github/user/repos')
 .then(data => data.forEach(repo =>
-  $('#project').append(`<a href="${repo.html_url}" target="_blank"><li class="repoName">${repo.name}</li></a>`,
+  $('#project').append(`<p>Projects on GitHub</p>`,
+    `<a href="${repo.html_url}" target="_blank"><li class="repoName">${repo.name}</li></a>`,
     `<li class="repoDescrip">Description: ${repo.description}</li>`,
     `<li class="repoLanguage">Language: ${repo.language}</li>`,
     `<li class="repoCreated">Created: ${repo.created_at}</li>`)),

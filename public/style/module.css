@@ -47,6 +47,14 @@ a:visited {
   list-style: square;
 }
 
+.project-content {
+  position: absolute;
+  margin-top: 300px;
+}
+
+.project-content p {
+  font-size: 2em;
+}
 
 .home-content {
   display: none;

@@ -10,6 +10,7 @@ main {
   position: relative;
   max-width: 100%;
   z-index: 1;
+  background-color: #9fa8a3;
 }
 
 h1 {

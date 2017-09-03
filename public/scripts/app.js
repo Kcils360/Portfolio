@@ -18,12 +18,12 @@ if($width<$height){
 (function handleMainNav(){
   const $menuList = $('.menu li');
   $($menuList).on('click', function() {
-    console.log(this.className);
+    console.log(this);
     hideContent();
     $('#' + this.className).fadeIn(700);
-    // if($width < $height){
+    if($width < 800){
       $('.menu').slideToggle();
-    // }
+    }
   });
 
   $('#hamburger').click(function(){

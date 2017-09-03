@@ -7,6 +7,7 @@ const hideContent = function(){
   $('#sliderTall').hide();
   $('#about').hide();
   $('#gitProjects').hide();
+  $('#work').hide();
 };
 
 (function showSlider(){

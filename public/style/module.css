@@ -68,6 +68,18 @@ a:visited {
   list-style: none;
 }
 
+.work-content{
+  padding-top: 280px;
+  width: 100%
+}
+
+iframe {
+  margin-left: 3%;
+  border-width: 5px;
+  border-style: outset;
+  overflow: hidden;
+}
+
 .repoName{
   font-size: 2em;
   padding-top: 10px;

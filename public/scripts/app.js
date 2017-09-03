@@ -21,9 +21,9 @@ if($width<$height){
     console.log(this.className);
     hideContent();
     $('#' + this.className).fadeIn(700);
-    if($width < $height){
+    // if($width < $height){
       $('.menu').slideToggle();
-    }
+    // }
   });
 
   $('#hamburger').click(function(){

@@ -12,12 +12,12 @@ const hideContent = function(){
 hideContent();
 if($width<$height){
   $('#sliderTall').show();
+  {$('li .slider').css('class', 'sliderTall')}
 } else{
   $('#slider').show();
 }
 (function handleMainNav(){
   const $menuList = $('.menu li');
-  if($width<$height){$('.slider').setClass('.sliderTall')}
   $($menuList).on('click', function() {
     console.log(this.className);
     hideContent();

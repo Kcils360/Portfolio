@@ -54,7 +54,7 @@ a:visited {
 
 .project-content {
   /*position: absolute;*/
-  margin-top: 280px;
+  padding-top: 280px;
   font-family: 'Sorts Mill Goudy', serif;
 }
 

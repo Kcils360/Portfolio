@@ -17,12 +17,10 @@ if($width<$height){
 }
 (function handleMainNav(){
   const $menuList = $('.menu li');
+  if($width<$height){$('.slider').setClass('.sliderTall')}
   $($menuList).on('click', function() {
-    console.log(this);
+    console.log(this.className);
     hideContent();
-    if($width<$height){
-      $('#sliderTall').prop('sliderTall', 'slider')
-    }
     $('#' + this.className).fadeIn(700);
     if($width < 800){
       $('.menu').slideToggle();

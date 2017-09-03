@@ -20,6 +20,9 @@ if($width<$height){
   $($menuList).on('click', function() {
     console.log(this);
     hideContent();
+    if($width<$height){
+      $('#sliderTall').prop('sliderTall', 'slider')
+    }
     $('#' + this.className).fadeIn(700);
     if($width < 800){
       $('.menu').slideToggle();

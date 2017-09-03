@@ -9,19 +9,25 @@ const hideContent = function(){
   $('#gitProjects').hide();
 };
 
-hideContent();
-if($width<$height){
-  $('#sliderTall').show();
-  {$('li .slider').css('class', 'sliderTall')}
-} else{
-  $('#slider').show();
-}
+(function showSlider(){
+  hideContent();
+  if($width<$height){
+    $('#sliderTall').show();
+  } else{
+    $('#slider').show();
+  }
+})();
+
 (function handleMainNav(){
   const $menuList = $('.menu li');
   $($menuList).on('click', function() {
     console.log(this.className);
     hideContent();
     $('#' + this.className).fadeIn(700);
+    if((this.className === 'slider') && ($width<$height)) {
+      $('#slider').hide();
+      $('#sliderTall').fadeIn(700);
+    }
     if($width < 800){
       $('.menu').slideToggle();
     }

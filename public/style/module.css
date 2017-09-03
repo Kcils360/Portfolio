@@ -34,6 +34,7 @@ a:visited {
 
 .about-content {
   padding-top: 280px;
+  font-family: 'Sorts Mill Goudy', serif;
 }
 
 .about-content p {
@@ -47,9 +48,13 @@ a:visited {
   list-style: square;
 }
 
+.details:last-child {
+  padding-bottom: 20px;
+}
+
 .project-content {
-  position: absolute;
-  margin-top: 250px;
+  /*position: absolute;*/
+  margin-top: 280px;
   font-family: 'Sorts Mill Goudy', serif;
 }
 
@@ -59,7 +64,7 @@ a:visited {
 
 #project {
   font-size: 1.5em;
-  margin-left: 2%;
+  margin-left: 5%;
   list-style: none;
 }
 

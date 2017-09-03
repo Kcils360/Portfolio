@@ -6,7 +6,7 @@ const hideContent = function(){
   $('#slider').hide();
   $('#sliderTall').hide();
   $('#about').hide();
-  $('#project').hide();
+  $('#gitProjects').hide();
 };
 
 hideContent();
@@ -65,7 +65,7 @@ $(function() {
 
 $.get('/github/user/repos')
 .then(data => data.forEach(repo =>
-  $('#project').append(`<p>Projects on GitHub</p>`,
+  $('#project').append(
     `<a href="${repo.html_url}" target="_blank"><li class="repoName">${repo.name}</li></a>`,
     `<li class="repoDescrip">Description: ${repo.description}</li>`,
     `<li class="repoLanguage">Language: ${repo.language}</li>`,

@@ -9,6 +9,9 @@ const hideContent = function(){
   $('#gitProjects').hide();
   $('#work').hide();
 };
+(function hideContact() {
+  $('#contactList').slideToggle();
+})();
 
 (function showSlider(){
   hideContent();
@@ -20,7 +23,7 @@ const hideContent = function(){
 })();
 
 (function handleMainNav(){
-  const $menuList = $('.menu li');
+  const $menuList = $('.menu li').siblings('#menuLi');
   $($menuList).on('click', function() {
     console.log(this.className);
     hideContent();
@@ -36,6 +39,9 @@ const hideContent = function(){
 
   $('#hamburger').click(function(){
     $('.menu').slideToggle();
+  });
+  $('#contact').click(function(){
+    $('.contactList').slideToggle();
   });
 })()
 

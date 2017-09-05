@@ -8,6 +8,15 @@
   border-radius: 50%;
 }
 
+.contact {
+  color: dimgrey;
+}
+
+.contactList{
+  text-align: center;
+  color: darkblue;
+}
+
 #slider {
   overflow: hidden;
 }
@@ -70,6 +79,17 @@
     margin-top: 120px;
   }
 
+  .contact {
+    margin-left: 5px;
+  }
+
+  .contactList {
+    margin-left: 5px;
+    width: 500px;
+    text-align: left;
+  }
+
+
   #break {
     display: none;
   }
@@ -100,4 +120,11 @@
     display: none;
   }
 
+}
+
+@media screen and (min-width: 1050px) {
+
+  .contactList {
+    padding-left: 770px;
+  }
 }
